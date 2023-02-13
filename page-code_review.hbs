@@ -1,0 +1,156 @@
+{{!< default}}
+
+<main>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 lg:pt-20 text-center">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold tracking-tight">Code Review</h1>
+      <p class="mt-4 leading-7 text-gray-600">A code/software review is the process of testing your code parameters. Once you have completed the <br /> project and created a GitHub repository, you will be able to send it to us and we will check it out</p>
+    </div>
+    <div class="mt-12 flex justify-center gap-x-6">
+      <a href="#form">
+        <button class="group inline-flex items-center justify-center rounded-full py-3 px-8 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">Check your code</button>
+      </a>
+    </div>
+
+    <div class="flex flex-col items-center mt-20 pt-10">
+      <h1 class="text-3xl font-bold tracking-tight">Why should you do this?</h1>
+      <div class="mx-auto mt-10 max-w-2xl lg:max-w-none ml-40 mr-40">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
+          <div class="flex flex-col">
+            <p class="text-gray-900 mt-6 text-lg font-semibold text-left">Because no one can ever say No to a FREE Сode Review!</p>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+              <p class="flex-auto text-left text-gray-500 text-sm">The main goal of this process is to provide you with an expert analysis and suggestions on how you can improve your product</p>
+            </dd>
+          </div>
+
+          <div class="flex flex-col">
+            <p class="text-gray-900 mt-6 text-lg font-semibold text-left">Here is how the process goes:</p>
+            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+              <p class="flex-auto text-left text-gray-500 text-sm">After you have submitted your code, you will receive a review of it, including the test coverage analysis. We will schedule a call  where we can go through the corrections with you, to better elaborate the result</p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center mt-20 pt-10">
+      <h1 class="text-3xl font-bold tracking-tight">Code Review options</h1>
+      <div class="mx-auto mt-10 max-w-2xl sm:mt-10 lg:mt-16 lg:max-w-4xl">
+        <dl class="grid max-w-xl grid-cols-1 gap-y-10 gap-x-8 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div class="text-left relative pl-16">
+            <dt class="flex justify-center font-semibold leading-7 text-gray-900">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center">
+                <img src="{{ asset "images/Code.svg"}}" >
+              </div>
+            </dt>
+            <p class="text-gray-900 mt-2 text-lg font-bold text-center">Code Quality</p>
+            <dd class="mt-2 text-base leading-7 text-gray-500 text-sm">The code should be reliable—errors should be handled properly. Try using try-catches everywhere where there&apos;s a possibility for an error, so the user never gets something unexpected. Remember the DRY (Don’t Repeat Yourself) principle? Everything that can be reused should be made into a service, a util function, etc. Please be sure to write generic classes and interfaces</dd>
+          </div>
+
+          <div class="text-left relative pl-16">
+            <dt class="flex justify-center font-semibold leading-7 text-gray-900">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center">
+                <img src="{{ asset "images/Settings.svg"}}" >
+              </div>
+            </dt>
+            <p class="text-gray-900 mt-2 text-lg font-bold text-center">Code Maintainability</p>
+            <dd class="mt-2 text-base leading-7 text-gray-500 text-sm">Here are a few Don’ts you should keep in mind: don&apos;t use nested loops if there&apos;s no need for them and don&apos;t use loggers. Your code should be: readable, easily testable, easy to debug and configurable. Keep in mind that if we can’t get an idea of what is going on in the code just by looking at it, it is probably not the best-written code</dd>
+          </div>
+
+          <div class="text-left relative pl-16">
+            <dt class="flex justify-center font-semibold leading-7 text-gray-900">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center">
+                <img src="{{ asset "images/Scale.svg"}}" >
+              </div>
+            </dt>
+            <p class="text-gray-900 mt-2 text-lg font-bold text-center">Project Architecture</p>
+            <dd class="mt-2 text-base leading-7 text-gray-500 text-sm">The project should follow a certain architecture (MVC, Client-Server, Service-oriented etc.) and should use the proper code, design patterns, and technologies. The code should also be split into multiple layers and tiers (Presentation, Business and Data layers)</dd>
+          </div>
+
+          <div class="text-left relative pl-16">
+            <dt class="flex justify-center font-semibold leading-7 text-gray-900">
+              <div class="mb-4 flex h-10 w-10 items-center justify-center">
+                <img src="{{ asset "images/More.svg"}}" >
+              </div>
+            </dt>
+            <p class="text-gray-900 mt-2 text-lg font-bold text-center">+ Many more parameters</p>
+            <dd class="mt-2 text-base leading-7 text-gray-500 text-sm">We will be testing many other parameters in this process, including code formatting, the usage of framework features, speed optimization, code security, code performance and code reusability</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div id="form" class="mt-40 mb-40 md:col-span-2 sm:pl-20 sm:pr-20 lg:pl-40 lg:pr-40">
+      <h1 class="text-3xl font-bold tracking-tight text-center">Let&apos;s check your code</h1>
+      <form class="space-y-8">
+        <div class="space-y-8">
+        
+          <div class="pt-8">
+            <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+              <div class="sm:col-span-3">
+                <label for="full-name" class="block text-sm font-medium text-gray-700 text-left">Full name</label>
+                <div class="mt-1">
+                  <input type="text" name="full-name" id="full-name" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label for="email" class="block text-sm font-medium text-gray-700 text-left">Email</label>
+                <div class="mt-1">
+                  <input type="email" name="email" id="email" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label for="company" class="block text-sm font-medium text-gray-700 text-left">Company</label>
+                <div class="mt-1">
+                  <input type="text" name="company" id="company" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3">
+                <label for="url" class="block text-sm font-medium text-gray-700 text-left">Enter URL here (github or similar)</label>
+                <div class="mt-1">
+                  <input type="text" name="url" id="url" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                </div>
+              </div>
+
+
+              <div class="sm:col-span-6">
+                <label for="description" class="block text-sm font-medium text-gray-700 text-left">Why are you using our service?</label>
+                <div class="mt-1">
+                  <textarea name="description" rows="7" id="description" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm pl-3 pt-3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="mt-6">
+              <fieldset class="mt-6">
+                <div class="mt-4 space-y-4">
+                  <div class="flex items-center">
+                    <input id="push-everything" name="push-notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                    <label for="push-everything" class="ml-3 block text-sm font-medium text-gray-700">Basic Review (free)</label>
+                  </div>
+                  <div class="flex items-center">
+                    <input id="push-email" name="push-notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                    <label for="push-email" class="ml-3 block text-sm font-medium text-gray-700">Full review (price calculated by type and size of project)</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-sm text-gray-500 text-left">*We hold the right to reject code review if it doesn’t match our technologies, project size or similar criteria</p>
+        <p class="text-sm text-gray-500 text-left">If full review is requested our team will contact you with further details based on project size, type and technologies used</p>
+
+        <div class="px-4 py-3 text-center sm:px-6">
+          <button href="#form" class="group inline-flex items-center justify-center rounded-full py-3 px-16 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">Submit</button>
+          <p class="mt-5 text-gray-500 text-sm text-center">By clicking &quot;Start your Project&quot; you agree to the Privacy Policy and Terms of Use </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

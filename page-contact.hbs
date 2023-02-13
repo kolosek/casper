@@ -1,0 +1,147 @@
+{{!< default}}
+
+<main>
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 lg:pt-20 text-center">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold tracking-tight">Feel like working together?</h1>
+      <p class="mt-4 leading-8 text-gray-600">We helped build many startups in various industries. We are sure we can help you too. <br /> Tell us more about your project or idea</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 mt-20 mb-20">
+      <div class="relative overflow-hidden bg-gradient-to-b bg-gray-100 py-10 px-6 sm:px-10 xl:p-12">
+        <h3 class="text-3xl text-left font-semibold">Get in touch</h3>
+        <div class="flex items-center mt-10">
+          <img src={{ asset "images/Call.svg"}} />
+          <div class="ml-4 text-lg font-semibold">Call us</div>
+        </div>
+        <p class="text-left text-sm text-gray-500 mt-5">Schedule a meeteng to discuss your idea and see how we can help</p>
+        <p class="text-left text-sm mt-3 underline"><a href="#">Schedule a call</a></p>
+        <div class="flex items-center mt-10">
+          <img src={{ asset "images/Message.svg"}} />
+          <div class="ml-4 text-lg font-semibold">Write to us</div>
+        </div>
+        <p class="text-left text-sm text-gray-500 mt-5">If you prefere to chat fill out the feedback form or say hello at <u class="text-black"><a href="#">hello@kolosek.com</a></u></p>
+      </div>
+
+      <div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+        <form action="#" method="POST" class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <div class="sm:col-span-2">
+            <div class="mt-1">
+              <input type="text" placeholder="Full name" name="full_name" id="full_name" class="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500 placeholder-gray-400 p-3" />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="mt-1">
+              <input type="email" placeholder="Email" name="email" id="email" class="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500 placeholder-gray-400 p-3" />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="mt-1">
+              <input type="text" placeholder="Company / Project" name="company_project" id="company_project" class="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500 placeholder-gray-400 p-3" />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="mt-1">
+              <textarea id="description" placeholder="Tell us your needs" name="description" rows="4" class="block w-full rounded-md border border-gray-300 py-3 px-4 text-warm-gray-900 shadow-sm focus:border-teal-500 focus:ring-teal-500 placeholder-gray-400 pl-3 pt-3" aria-describedby="message-max"></textarea>
+            </div>
+          </div>
+          <div class="sm:col-span-2 sm:flex sm:justify-start">
+            <button href="#form" class="group inline-flex items-center justify-center rounded-full py-3 px-10 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">Make it happen</button>
+          </div>
+        </form>
+        <p class="mt-3 text-gray-500 text-sm text-left">By clicking &quot;Start your Project&quot; you agree to the Privacy Policy and Terms of Use </p>
+      </div>
+    </div>
+
+    <div class="mt-40 mb-40 md:col-span-2 sm:pl-20 sm:pr-20 lg:pl-40 lg:pr-40">
+      <h1 class="text-4xl font-bold tracking-tight text-center">Need a review?</h1>
+      <p class="mt-4 leading-8 text-gray-600">Submit your code or/and design to get feedback on your work. The main goal of this process is to provide <br /> you with an expert analysis and suggestions on how to improve your product</p>
+      <div class="flex-column xl:flex justify-center mt-16">
+        <div class="overflow-hidden rounded-lg bg-white shadow mb-3 pl-4 xl:mr-14">
+          <div class="px-4 py-5 sm:p-6">
+            <p class="text-left text-3xl font-semibold">Code</p>
+            <fieldset class="space-y-5 pt-8">
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="comments" aria-describedby="comments-description" name="comments" checked disabled type="checkbox" class="h-4 w-4 rounded border border-gray-300 text-black focus:ring-gray-500">
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="comments-description" class="text-gray-500">Code Quality</p>
+                </div>
+              </div>
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="candidates" aria-describedby="candidates-description" name="candidates" checked disabled type="checkbox" class="h-4 w-4 rounded border border-gray-300 text-black focus:ring-gray-500" />
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="candidates-description" class="text-gray-500">Code Maintainability</p>
+                </div>
+              </div>
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="offers" aria-describedby="offers-description" name="offers" type="checkbox" checked disabled class="h-4 w-4 rounded border border-gray-300 text-black focus:ring-gray-500" />
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="offers-description" class="text-gray-500">Project Architecture</p>
+                </div>
+              </div>
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="offers" aria-describedby="offers-description" name="offers" type="checkbox" checked disabled class="h-4 w-4 rounded border border-gray-300 text-black focus:ring-gray-500" />
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="offers-description" class="text-gray-500">+ many more parameters</p>
+                </div>
+              </div>
+            </fieldset>
+            <div class="px-4 py-3 text-center sm:px-6 mt-8">
+              <button href="#form" class="group inline-flex items-center justify-center rounded-full py-3 px-24 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-gray-600 hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900 border-gray-600 border">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="overflow-hidden rounded-lg bg-white shadow mb-3 pl-4">
+          <div class="px-4 py-5 sm:p-6">
+            <p class="text-left text-3xl font-semibold">Design</p>
+            <fieldset class="space-y-5 pt-8">
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="comments" aria-describedby="comments-description" name="comments" checked disabled type="checkbox" class="h-4 w-4 rounded border border-gray-300 text-black focus:ring-gray-500" />
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="comments-description" class="text-gray-500">System Messages</p>
+                </div>
+              </div>
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="candidates" aria-describedby="candidates-description" name="candidates" checked disabled type="checkbox" class="h-4 w-4 border rounded border-gray-300 text-black focus:ring-gray-500" />
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="candidates-description" class="text-gray-500">Typography</p>
+                </div>
+              </div>
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="offers" aria-describedby="offers-description" name="offers" type="checkbox" checked disabled class="h-4 w-4 rounded border border-gray-300 text-black focus:ring-gray-500" />
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="offers-description" class="text-gray-500">Colors Foregrounds & Backgrounds</p>
+                </div>
+              </div>
+              <div class="relative flex items-start">
+                <div class="flex h-5 items-center">
+                  <input id="offers" aria-describedby="offers-description" name="offers" type="checkbox" checked disabled class="h-4 w-4 rounded border border-gray-300 text-black focus:ring-gray-500" />
+                </div>
+                <div class="ml-3 text-sm">
+                  <p id="offers-description" class="text-gray-500">+ many more UI & UX features</p>
+                </div>
+              </div>
+            </fieldset>
+            <div class="px-4 py-3 text-center sm:px-6 mt-8">
+              <button href="#form" class="group inline-flex items-center justify-center rounded-full py-3 px-24 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-white text-gray-600 hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900 border-gray-600 border">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

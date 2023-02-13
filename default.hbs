@@ -19,56 +19,25 @@
   <header class="py-5">
     <div class="relative bg-white">
       <div class="mx-auto flex max-w-7xl items-center justify-between p-6 md:justify-start md:space-x-10 lg:px-8">
-        <div class="flex justify-start lg:w-0 lg:flex-1">
+        <div class="flex justify-start lg:w-0 lg:flex-1 pr-10">
           <a class="flex items-center" href="/">
-            <img src="{{ asset "images/logo.png"}}" alt="logo" >
-            <span class="font-semibold ml-2">kolosek</span>
+            <img src="{{ asset "images/logo.png"}}" width="30" height="30" alt="logo" >
+            <span class="text-2xl font-medium ml-2">kolosek</span>
           </a>
         </div>
-        <div class="-my-2 -mr-2 md:hidden">
-          <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-            <span class="sr-only">Open menu</span>
-            <!-- Heroicon name: outline/bars-3 -->
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0 ">
-          <nav class="hidden space-x-8 md:flex">
+        <div class="items-center justify-end md:flex flex-wrap md:flex-1 lg:w-0">
+          <nav class="space-x-8 md:flex">
             <a href="/about" class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">About Us</a>
-            <a href="#" class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Featured projects</a>
+            <a href="/process" class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Featured projects</a>
             <a href="#" class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Careers</a>
-            <a href="#" class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Contacts</a>
+            <a href="/contact" class="inline-block rounded-lg py-1 px-2 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Contacts</a>
           </nav>
-        </div>
-      </div>
-
-      <div class="absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition md:hidden">
-        <div class="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-          <div class="px-5 pt-5 pb-6">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center" >
-                <img src="{{ asset "images/logo.png"}}" alt="logo">
-                <span class="font-semibold ml-2">kolosek</span>
-              </div>
-            </div>
-          </div>
-          <div class="py-6 px-5">
-            <div class="grid grid-cols-1 gap-4">
-              <a href="/about" class="text-base font-medium text-gray-900 hover:text-gray-700 text-center">About Us</a>
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700 text-center">Featured projects</a>
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700 text-center">Careers</a>
-              <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700 text-center">Contacts</a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </header>
 
   <div class="site-content">
-      {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
       {{{body}}}
   </div>
 
@@ -78,29 +47,29 @@
       <div class="xl:grid xl:grid-cols-3 xl:gap-8">
         <div class="space-y-8">
           <a class="flex items-center" href="/">
-            <img src="{{ asset "images/logo.png"}}" alt="logo" >
-            <span class="font-semibold text-white ml-2">kolosek</span>
+            <img src="{{ asset "images/logo.png"}}" width="30" height="30" alt="logo">
+            <span class="text-2xl font-medium text-white ml-2">kolosek</span>
           </a>
           <p class="text-sm leading-6 text-gray-300">Novi Sad, Serbia, Europe</p>
           <div class="flex space-x-6">
             <a href="#" class="text-gray-400 hover:text-gray-500">
-              
+              <img src="{{ asset "images/git.svg"}}">
             </a>
 
             <a href="#" class="text-gray-400 hover:text-gray-500">
-             
+             <img src="{{ asset "images/facebook.svg"}}">
             </a>
 
             <a href="#" class="text-gray-400 hover:text-gray-500">
-              
+              <img src="{{ asset "images/instagram.svg"}}">
             </a>
 
             <a href="#" class="text-gray-400 hover:text-gray-500">
-             
+             <img src="{{ asset "images/twitter.svg"}}">
             </a>
 
             <a href="#" class="text-gray-400 hover:text-gray-500">
-             
+             <img src="{{ asset "images/linkedin.svg"}}">
             </a>
           </div>
         </div>
@@ -122,7 +91,7 @@
                 </li>
 
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-300 hover:text-gray-400">Contact</a>
+                  <a href="/contact" class="text-sm leading-6 text-gray-300 hover:text-gray-400">Contact</a>
                 </li>
               </ul>
             </div>
@@ -144,11 +113,11 @@
               <h3 class="text-sm font-semibold leading-6 text-white">Company</h3>
               <ul role="list" class="mt-6 space-y-4">
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-300 hover:text-gray-400">Design Review</a>
+                  <a href="/design_review" class="text-sm leading-6 text-gray-300 hover:text-gray-400">Design Review</a>
                 </li>
 
                 <li>
-                  <a href="#" class="text-sm leading-6 text-gray-300 hover:text-gray-400">Code Review</a>
+                  <a href="/code_review" class="text-sm leading-6 text-gray-300 hover:text-gray-400">Code Review</a>
                 </li>
 
                 <li>
