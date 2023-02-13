@@ -274,4 +274,43 @@ into the {body} of the default.hbs template --}}
     </ul>
   </div>
 
+  <section
+    id="testimonials"
+    aria-label="What our customers are saying"
+    class="py-20 sm:py-32"
+  >
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl md:text-center">
+        <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
+          From the blog
+        </h2>
+        <p class="mt-4 tracking-tight text-slate-600">
+          Usually we are writing about what we are interested in doing. Visit our <a href="#" class="text-base leading-7"><u>Blog</u></a> for more
+        </p>
+      </div>
+      <ul
+        role="list"
+        class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
+      >
+        {{#get "posts" filter="featured:true" limit="1" include="authors,tags"}}
+          {{#foreach posts}}
+
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+
+          {{/foreach}}
+        {{/get}}
+
+        {{#get "posts" filter="featured:false" limit="6" include="authors,tags"}}
+          {{#foreach posts}}
+
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+
+          {{/foreach}}
+        {{/get}}
+      </ul>
+    </vid>
+  </section>
+
 </main>
