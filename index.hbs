@@ -1,8 +1,7 @@
 {{!< default}}
-{{!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template --}}
 
-{{!-- The main content area --}}
+{{> navigation other=true}}
+
 <main>
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 sm:mt-10 lg:mt-16">
     <p class="text-gray-600 text-center"> We're hiring! Visit our <a href="/careers" class="text-base leading-7 text-gray-900">Careers</a> page </p>
@@ -285,7 +284,7 @@ into the {body} of the default.hbs template --}}
           From the blog
         </h2>
         <p class="mt-4 tracking-tight text-slate-600">
-          Usually we are writing about what we are interested in doing. Visit our <a href="#" class="text-base leading-7"><u>Blog</u></a> for more
+          Usually we are writing about what we are interested in doing. Visit our <a href="#" class="text-base leading-7"><u><a href="/blog">Blog</a></u></a> for more
         </p>
       </div>
       <ul
@@ -314,3 +313,5 @@ into the {body} of the default.hbs template --}}
   </section>
 
 </main>
+
+{{> footer other=true}}
