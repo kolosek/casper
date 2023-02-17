@@ -1,317 +1,77 @@
 {{!< default}}
 
-{{> navigation other=true}}
+{{> navigation blog=true}}
 
-<main>
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 sm:mt-10 lg:mt-16">
-    <p class="text-gray-600 text-center"> We're hiring! Visit our <a href="/careers" class="text-base leading-7 text-gray-900">Careers</a> page </p>
-    <h1 class="mt-5 mx-auto font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl text-center">
-      Creating software solutions <br /> 
-      that work
-    </h1>
-    <div class="mt-12 flex justify-center gap-x-6">
-      <a href="/contact">
-        <button href="#" class="group inline-flex items-center justify-center rounded-full py-3 px-8 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">Start your Project</button>
-      </a>
-    </div>
-    <div class="mt-20 pt-20 text-center">
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">State-of-the-art <br /> front-end and back-end systems</h1>
-      <p class="mt-4 leading-8 text-gray-600">Why state-of-the-art? Because every app we create is a unique piece of work <br /> which our team, in cooperation with you, has dedicated its time to</p>
-    </div>
-  </div>
+<main id="site-main" class="site-main outer">
+  <div class="mx-auto max-w-7xl sm:px-6 pt-4 text-center">
+    <div class="flex-column md:flex justify-between">
+      <div class="inner posts">
+        {{#get "posts" limit="8" include="authors,tags"}}
+          <ul
+            role="list"
+            class="post-feed grid grid-cols-1 gap-12 lg:grid-cols-2 mb-16"
+          >
+            {{#foreach posts}}
 
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 sm:mt-10 lg:mt-16">
-    <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-      <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-        <div class="flex flex-col">
-          <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-            <img src="{{ asset "images/web2.svg"}}" />
-          </dt>
-          <p class="text-gray-900 mt-6 text-lg font-bold">Web Development</p>
-          <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-sm text-gray-600">
-            <p class="flex-auto">Our developers and designers are there to find the best and the most creative solutions for you  and help you end up with a reliable product and user experience</p>
-          </dd>
-        </div>
+              {{> "post-card-full" show_image=true}}
 
-        <div class="flex flex-col">
-          <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-            <img src="{{ asset "images/mobile.svg"}}" />
-          </dt>
-          <p class="text-gray-900 mt-6 text-lg font-bold">Custom Mobile Apps</p>
-          <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-sm  text-gray-600">
-            <p class="flex-auto">Mobile apps are timeless. With their number constantly rising, we make sure to deliver an amazing experience combined with high performance across multiple platforms</p>
-          </dd>
-        </div>
-
-        <div class="flex flex-col">
-          <dt class="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
-            <img src="{{ asset "images/ux.svg"}}" />
-          </dt>
-          <p class="text-gray-900 mt-6 text-lg font-bold">User Experience</p>
-          <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-sm text-gray-600">
-            <p class="flex-auto">A good user experience should speak to the end user&apos;s emotions. Why? Because it&apos;s your user&apos;s perception of the product that is going to set you apart from all the other apps out there and your competition</p>
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </div>
-
-  <div class="mt-20 pt-10 text-center">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Round-the-clock care for your products</h1>
-    <p class="mt-3 leading-8 text-gray-500">We always know what is ongoing and have a good advice</p>
-    <div class="mt-10 flex justify-center">
-      <img src="{{ asset "images/graph_performance.png"}}" />
-    </div>
-  </div>
-
-  <div class="mt-20 pt-10 text-center">
-    <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-3xl">Quality code which will be presented <br /> through excellent UX</h1>
-    <p class="mt-4 leading-8 text-gray-600">The Kolosek team consists of development and designer teams which make sure that clients get to fully <br /> experience our product development process — from coming up with a project idea, to design and front-end <br /> development, all the way to back-end development</p>
-  </div>
-
-  <div class="mt-20 pt-10 text-center bg-gray-50 pb-20 xl:pl-40 xl:pr-40">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">..besides</h1>
-    <div class="flex justify-between font-bold text-left px-10 lg:px-40 mt-10">
-      <ul>
-        <li class="mb-4">
-          <div class="flex items-center">
-            <img src="{{ asset "images/check.png"}}" class="mr-4 w-3 h-3" />
-            <div>Product research</div>
-          </div>
-        </li>
-        <li class="mb-4">
-          <div class="flex items-center">
-            <img src="{{ asset "images/check.png"}}" class="mr-4 w-3 h-3" />
-            <div>UI UX Design</div>
-          </div>
-        </li>
-      </ul>
-      <ul>
-        <li class="mb-4">
-          <div class="flex items-center">
-            <img src="{{ asset "images/check.png"}}" class="mr-4 w-3 h-3" />
-            <div>Test driven development</div>
-          </div>
-        </li>
-        <li class="mb-4">
-          <div class="flex items-center">
-            <img src="{{ asset "images/check.png"}}" class="mr-4 w-3 h-3" />
-            <div>DevOps</div>
-          </div>
-        </li>
-      </ul>
-      <ul>
-        <li class="mb-4">
-          <div class="flex items-center">
-            <img src="{{ asset "images/check.png"}}" class="mr-4 w-3 h-3" />
-            <div>Project management</div>
-          </div>
-        </li>
-        <li class="mb-4">
-          <div class="flex items-center">
-            <img src="{{ asset "images/check.png"}}" class="mr-4 w-3 h-3" />
-            <div>Marketing & Sales</div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="mt-20 lg:pt-12 text-center">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Featured projects</h1>
-    <p class="mt-4 leading-8 text-gray-600">Here are a few recent works we are proud of. For more check our <a href="#" class="text-base leading-7"><u>Portfolio</u></a></p>
-  </div>
-  <div class="bg-white">
-    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-      <div class="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 xl:gap-x-8">
-        <div class="text-left">
-          <img src="{{ asset "images/Rubi.ci.png"}}" />
-          <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">              
-          </div>
-          <h3 class="mt-4 text-lg text-gray-900 font-bold">Rubi.ci</h3>
-          <p class="mt-1 text-sm text-gray-500 mb-2">Best CI platform for your Rails application · 2-min setup with no extra code, tools & UI built for your Ruby on Rails Application</p>
-          <div class="flex items-center">
-            <img src="{{ asset "images/link.png"}}" class="mr-2 w-3 h-3"/>
-            <div class="text-sm text-gray-400"> ruby.ci</div>
-          </div>
-        </div>
-
-        <div class="text-left">
-          <img src="{{ asset "images/The_Next_Closet.png"}}" />
-          <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">     
-          </div>
-          <h3 class="mt-4 text-lg text-gray-900 font-bold">The Next Closet</h3>
-          <p class="mt-1 text-sm text-gray-500 mb-2">The largest marketplace for second hand designer brands in Netherlands · Building and maintaining web and mobile app with millions of visitors per month</p>
-          <div class="flex items-center">
-            <img src="{{ asset "images/link.png"}}" class="mr-2 w-3 h-3"/>
-            <div class="text-sm text-gray-400"> thenextcloset.com</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 mt-10 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 xl:gap-x-8">
-        <div class="text-left">
-          <img src="{{ asset "images/O.school.png"}}" />
-          <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-          </div>
-          <h3 class="mt-4 text-lg text-gray-900 font-bold">O.school</h3>
-          <p class="mt-1 text-sm text-gray-500 mb-2">Judgment-free, science-based sexual wellness platform · Initial product planning and execution · A virtual classroom app, based on live streaming technology and moderated chat · Featured on Techcrunch</p>
-          <div class="flex items-center">
-            <img src="{{ asset "images/link.png"}}" class="mr-2 w-3 h-3"/>
-            <div class="text-sm text-gray-400"> o.school</div>
-          </div>
-        </div>
-
-        <div class="text-left">
-          <img src="{{ asset "images/MoviePilot.png"}}" />
-          <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
-          </div>
-          <h3 class="mt-4 text-lg text-gray-900 font-bold">MoviePilot</h3>
-          <p class="mt-1 text-sm text-gray-500 mb-2">Your guide to films & cinemas · Alternative of IMDB for Germany speaking market with huge number of visitors · We are sole technology partner using Ruby on Rails and React for several years</p>
-          <div class="flex items-center">
-            <img src="{{ asset "images/link.png"}}" class="mr-2 w-3 h-3"/>
-            <div class="text-sm text-gray-400"> moviepilot.de</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-10 text-center">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Prioritizing privacy & security</h1>
-    <p class="mt-4 leading-8 text-gray-600">We believe in process driven development & privacy of the data <br /> ISO 9001:2013, ISO 27001:2013 USA certification</p>
-  </div>
-  <div class="overflow-hidden bg-white py-10 sm:py-20">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto grid max-w-2xl grid-cols-1 gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-        <div class="lg:pt-4">
-          <div class="lg:max-w-lg text-left">
-            <dl class="mt-3 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-              <div class="relative pl-9 bg-black pt-6 pb-6">
-                <dt class="inline font-semibold text-gray-50">
-                  Build quality software faster!
-                </dt>
-                <dd class="text-gray-400">With our automated optimization tools</dd>
-              </div>
-
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
-                  No more searching
-                </dt>
-                <dd class="text-gray-400">Know what test is exactly broken and where it is</dd>
-              </div>
-
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
-                  Slowest files report
-                </dt>
-                <dd class="text-gray-400">Know where are those bottlenecks</dd>
-              </div>
-
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-gray-900">
-                  Stay on track!
-                </dt>
-                <dd class="text-gray-400">Get notified that the build failed</dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-        <img src="{{ asset "images/interface.png"}}" />
-      </div>
-    </div>
-  </div>
-
-  <div class="mt-20 lg:mt-20 mb-10" }>
-    <p class="font-display text-center text-gray-400">
-      Trusted by
-    </p>
-    <ul class="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
-      <li>
-        <ul class="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
-          <li class="flex">
-            <img src="{{ asset "images/thenextcloset.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/boardspan.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/squire.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/simone_leblanc.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/listium.png"}}" width="140" height="100" />
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <ul class="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
-      <li>
-        <ul class="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
-          <li class="flex">
-            <img src="{{ asset "images/school.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/moviepilot.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/wrap.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/ruby_ci.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/versa.png"}}" width="140" height="100" />
-          </li>
-          <li class="flex">
-            <img src="{{ asset "images/stylemyls.png"}}" width="140" height="100" />
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <section
-    id="testimonials"
-    aria-label="What our customers are saying"
-    class="py-20 sm:py-32"
-  >
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl md:text-center">
-        <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
-          From the blog
-        </h2>
-        <p class="mt-4 tracking-tight text-slate-600">
-          Usually we are writing about what we are interested in doing. Visit our <a href="#" class="text-base leading-7"><u><a href="/blog">Blog</a></u></a> for more
-        </p>
-      </div>
-      <ul
-        role="list"
-        class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
-      >
-        {{#get "posts" filter="featured:true" limit="1" include="authors,tags"}}
-          {{#foreach posts}}
-
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-
-          {{/foreach}}
+            {{/foreach}}
+          </ul>
+          
+          {{pagination}}
         {{/get}}
+      </div>
 
-        {{#get "posts" filter="featured:false" limit="6" include="authors,tags"}}
-          {{#foreach posts}}
+      <div>
+        <p class="text-3xl font-bold text-left">Creating <br /> software solutions <br /> that work</p>
+        <div class="mt-10 border-2 border-gray-200 pt-4 px-3">
+          <h2 class="text-lg font-bold tracking-tight text-gray-900 text-center">Explore topics</h2>
+          <div class="flex justify-between mt-5 pb-1 border-b-2 border-gray-200">
+            <div class="text-gray-900 font-medium">Elixir</div>
+            <div  class="text-gray-900 font-medium">5</div>
+          </div>
+          <div class="flex justify-between py-2 border-b-2 border-gray-200">
+            <div  class="text-gray-900 font-medium">Navigation</div>
+            <div  class="text-gray-900 font-medium">2</div>
+          </div>
+          <div class="flex justify-between py-2 border-b-2 border-gray-200">
+            <div class="text-gray-900 font-medium">CSS</div>
+            <div class="text-gray-900 font-medium">2</div>
+          </div>
+          <div class="flex justify-between py-2">
+            <div class="text-gray-900 font-medium">Git</div>
+            <div class="text-gray-900 font-medium">3</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-
-          {{/foreach}}
-        {{/get}}
-      </ul>
-    </vid>
-  </section>
-
+    <div class="pt-12 sm:pt-16 mt-16 mb-16 pb-8">
+      <h2 class="text-lg font-bold tracking-tight text-gray-900 text-left">Explore topics</h2>
+      <div class="mt-10">
+        <div class="relative">
+          <div>
+            <div>
+              <dl class="rounded-lg sm:grid sm:grid-cols-3">
+                <div class="flex flex-col px-6 py-12 text-center bg-gray-50 w-72">
+                  <dt class="order-2 mt-2 text-lg font-medium leading-6">CSS</dt>
+                  <dd class="order-1 text-3xl font-bold tracking-tight">5+</dd>
+                </div>
+                <div class="flex flex-col px-6 py-12 text-center bg-gray-50 w-72">
+                  <dt class="order-2 mt-2 text-lg font-medium leading-6">Navigation</dt>
+                  <dd class="order-1 text-3xl font-bold tracking-tight">2+</dd>
+                </div>
+                <div class="flex flex-col px-6 py-12 text-center bg-gray-50 w-72">
+                  <dt class="order-2 mt-2 text-lg font-medium leading-6">Elixir</dt>
+                  <dd class="order-1 text-3xl font-bold tracking-tight">3+</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
-{{> footer other=true}}
+{{> footer blog=true}}

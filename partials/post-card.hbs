@@ -26,7 +26,10 @@
               </div>
      
               <div class="text-xs text-gray-400">
-                {{date ../published_at format="MMMM D, YYYY"}}
+                <span class="mr-2">{{date ../published_at format="MMMM D, YYYY"}}</span>
+                {{#if ../reading_time}}
+                  <span>{{../reading_time}} min read</span>
+                {{/if}}
               </div>
             </div>
           </figcaption>

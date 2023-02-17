@@ -1,15 +1,17 @@
 <article class="post-card {{post_class}}{{#match @custom.feed_layout "Classic"}}{{#is "home"}}{{#has index="0"}} post-card-large{{/has}}{{#has index="1,2"}} dynamic{{/has}}{{/is}}{{/match}}{{#match @custom.feed_layout "Grid"}} keep-ratio{{/match}}{{#match @custom.feed_layout "List"}}{{#is "home, paged"}} post-card-large{{/is}}{{/match}}{{#unless access}} post-access-{{visibility}}{{/unless}}">
-  <li class="bg-gray-50 pb-6" style="width: 400px;">
+  <li class="bg-gray-50 pb-6 border border-gray-50" style="width: 400px; min-height: 300px;">
     <figure class="relative">
       <blockquote class="relative">
         {{#if feature_image}}
-          <a href="{{url}}">
-            <img src={{feature_image}} style="width: 400px; height: 300px;">
-          </a>
+          {{#if show_image}}
+            <a href="{{url}}">
+              <img src={{feature_image}} style="width: 400px; height: 300px;">
+            </a>
+          {{/if}}
         {{/if}}
-        <div class="pt-5 px-6">
+        <div class="pt-5 px-6 flex justify-start">
           {{#primary_tag}}
-            <div class="text-xs mb-2 py-1 w-12 rounded-xl border border-gray-900 text-center">{{name}}</div>
+            <div class="text-xs mb-2 py-1 px-3 rounded-xl border border-gray-900 text-center font-medium" style="display: inline-block">{{name}}</div>
           {{/primary_tag}}
         </div>
         <p class="tracking-tight font-bold text-lg text-left mb-3 px-6">
@@ -33,7 +35,10 @@
               </div>
      
               <div class="text-xs text-gray-400 text-left">
-                {{date ../published_at format="MMMM D, YYYY"}}
+                <span class="mr-2">{{date ../published_at format="MMMM D, YYYY"}}</span>
+                {{#if ../reading_time}}
+                  <span>{{../reading_time}} min read</span>
+                {{/if}}
               </div>
             </div>
           </figcaption>

@@ -13,13 +13,12 @@
           >
             {{#foreach posts}}
 
-              {{> "post-card-full"}}
+              {{> "post-card-full" show_image=true}}
 
             {{/foreach}}
           </ul>
-
+          
           {{pagination}}
-      
         {{/get}}
       </div>
 
@@ -48,11 +47,7 @@
     </div>
 
     <div class="pt-12 sm:pt-16 mt-16 mb-16 pb-8">
-      <div class="">
-        <div class="">
-          <h2 class="text-lg font-bold tracking-tight text-gray-900 text-left">Explore topics</h2>
-        </div>
-      </div>
+      <h2 class="text-lg font-bold tracking-tight text-gray-900 text-left">Explore topics</h2>
       <div class="mt-10">
         <div class="relative">
           <div>
