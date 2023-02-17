@@ -6,7 +6,6 @@
   <div class="mx-auto max-w-7xl sm:px-6 pt-4 text-center">
     <div class="flex-column md:flex justify-between">
       <div class="inner posts">
-        {{#get "posts" limit="8" include="authors,tags"}}
           <ul
             role="list"
             class="post-feed grid grid-cols-1 gap-12 lg:grid-cols-2 mb-16"
@@ -19,7 +18,6 @@
           </ul>
           
           {{pagination}}
-        {{/get}}
       </div>
 
       <div>

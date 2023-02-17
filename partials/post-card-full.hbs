@@ -1,5 +1,5 @@
 <article class="post-card {{post_class}}{{#match @custom.feed_layout "Classic"}}{{#is "home"}}{{#has index="0"}} post-card-large{{/has}}{{#has index="1,2"}} dynamic{{/has}}{{/is}}{{/match}}{{#match @custom.feed_layout "Grid"}} keep-ratio{{/match}}{{#match @custom.feed_layout "List"}}{{#is "home, paged"}} post-card-large{{/is}}{{/match}}{{#unless access}} post-access-{{visibility}}{{/unless}}">
-  <li class="bg-gray-50 pb-6 border border-gray-50" style="width: 400px; min-height: 300px;">
+  <li class="bg-gray-50 pb-6 border border-gray-50" style="width: 380px; min-height: 300px;">
     <figure class="relative">
       <blockquote class="relative">
         {{#if feature_image}}
