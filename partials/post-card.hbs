@@ -2,9 +2,11 @@
   <li>
     <figure class="relative">
       <blockquote class="relative">
-        {{#primary_tag}}
-          <div class="text-sm mb-2 bg-slate-100 w-12 rounded-xl text-center">{{name}}</div>
-        {{/primary_tag}}
+        <div class="flex justify-start mb-2">
+          {{#primary_tag}}
+            <div class="text-sm px-3 py-1 bg-slate-100 rounded-xl text-center">{{name}}</div>
+          {{/primary_tag}}
+        </div>
         <p class="tracking-tight font-bold text-lg mb-3">
           <a href="{{url}}">{{title}}</a>
         </p>
