@@ -135,66 +135,6 @@ html,body{
           </div></div>
           <p class="mt-3 text-gray-500 text-sm text-left">By clicking &quot;Start your Project&quot; you agree to the Privacy Policy and Terms of Use </p>
           </div>
-          <script>
-         
-         function reloadImg362158000000694001() {
-          var captcha = document.getElementById('imgid362158000000694001');
-          if (captcha.src.indexOf('&d') !== -1) {
-          captcha.src = captcha.src.substring(0, captcha.src.indexOf('&d')) + '&d' + new Date().getTime();
-          } else {
-          captcha.src = captcha.src + '&d' + new Date().getTime();
-          }
-         }
-         
-         function disableSubmitwhileReset362158000000694001() {
-          var submitbutton = document.getElementById('formsubmit362158000000694001');
-          if (document.getElementById('privacyTool362158000000694001') !== null || document.getElementById('consentTool') !== null) {
-          submitbutton.disabled = true;
-          submitbutton.style.opacity = '0.5;';
-          } else {
-          submitbutton.removeAttribute('disabled');
-          }
-         }
-         function checkMandatory362158000000694001() {
-          var mndFields=new Array('Last Name');
-          var fldLangVal=new Array('Last Name');
-          var i;
-          var mndFieldslength=mndFields.length;
-          var fieldObj;
-          for (i = 0; i < mndFieldslength; i++) {
-          fieldObj = document.forms.BiginWebToContactForm362158000000694001[mndFields[i]];
-          if (fieldObj) {
-          if (fieldObj.value.replace(/^s+|s+$/g, '').length === 0) {
-          if (fieldObj.type === 'file') {
-          alert('Please select a file to upload.');
-          fieldObj.focus();
-          return false;
-          }
-          alert(fldLangVal[i] + ' cannot be empty.');
-          fieldObj.focus();
-          return false;
-          } else if (fieldObj.nodeName === 'SELECT') {
-          if (fieldObj.options[fieldObj.selectedIndex].value === '-None-') {
-          alert(fldLangVal[i] + ' cannot be none.');
-          fieldObj.focus();
-          return false;
-          }
-          } else if (fieldObj.type === 'checkbox') {
-          if (fieldObj.checked === false) {
-          alert('Please accept  ' + fldLangVal[i]);
-          fieldObj.focus();
-          return false;
-          }
-          }
-          if (fieldObj.name === 'Last Name' && fieldObj.value) {
-          name = fieldObj.value;
-          }
-          }
-          }
-          return true;
-         }
-          function validateFileUpload(){var e=document.getElementById("theFile"),t=0;if(e){if(e.files.length>3)return alert("You can upload a maximum of three files at a time."),!1;if("files"in e){var i=e.files.length;if(0!==i){for(var o=0;o<i;o++){var a=e.files[o];"size"in a&&(t+=a.size)}if(t>20971520)return alert("Total file(s) size should not exceed 20MB."),!1}}}return!0}</script>
-          <script id='wf_script' src='https://bigin.zoho.eu/crm/WebformScriptServlet?rid=c938b3760cef79fa104a6d95db5ac1e66fe3e0257bd255427c8475587d49c2ffgid6fe99b3f7f48f0cd229fdd3776846295baad22d289a6dbf074ebaa00defd792b'></script>
         </form>
         </div>
       </div>
@@ -298,3 +238,64 @@ html,body{
 </main>
 
 {{> footer other=true}}
+  
+  <script>   
+    function reloadImg362158000000694001() {
+      var captcha = document.getElementById('imgid362158000000694001');
+      if (captcha.src.indexOf('&d') !== -1) {
+      captcha.src = captcha.src.substring(0, captcha.src.indexOf('&d')) + '&d' + new Date().getTime();
+      } else {
+      captcha.src = captcha.src + '&d' + new Date().getTime();
+      }
+     }
+   
+     function disableSubmitwhileReset362158000000694001() {
+      var submitbutton = document.getElementById('formsubmit362158000000694001');
+      if (document.getElementById('privacyTool362158000000694001') !== null || document.getElementById('consentTool') !== null) {
+      submitbutton.disabled = true;
+      submitbutton.style.opacity = '0.5;';
+      } else {
+      submitbutton.removeAttribute('disabled');
+      }
+     }
+     function checkMandatory362158000000694001() {
+      var mndFields=new Array('Last Name');
+      var fldLangVal=new Array('Last Name');
+      var i;
+      var mndFieldslength=mndFields.length;
+      var fieldObj;
+      for (i = 0; i < mndFieldslength; i++) {
+      fieldObj = document.forms.BiginWebToContactForm362158000000694001[mndFields[i]];
+      if (fieldObj) {
+      if (fieldObj.value.replace(/^s+|s+$/g, '').length === 0) {
+      if (fieldObj.type === 'file') {
+      alert('Please select a file to upload.');
+      fieldObj.focus();
+      return false;
+      }
+      alert(fldLangVal[i] + ' cannot be empty.');
+      fieldObj.focus();
+      return false;
+      } else if (fieldObj.nodeName === 'SELECT') {
+      if (fieldObj.options[fieldObj.selectedIndex].value === '-None-') {
+      alert(fldLangVal[i] + ' cannot be none.');
+      fieldObj.focus();
+      return false;
+      }
+      } else if (fieldObj.type === 'checkbox') {
+      if (fieldObj.checked === false) {
+      alert('Please accept  ' + fldLangVal[i]);
+      fieldObj.focus();
+      return false;
+      }
+      }
+      if (fieldObj.name === 'Last Name' && fieldObj.value) {
+      name = fieldObj.value;
+      }
+      }
+      }
+      return true;
+     }
+    function validateFileUpload(){var e=document.getElementById("theFile"),t=0;if(e){if(e.files.length>3)return alert("You can upload a maximum of three files at a time."),!1;if("files"in e){var i=e.files.length;if(0!==i){for(var o=0;o<i;o++){var a=e.files[o];"size"in a&&(t+=a.size)}if(t>20971520)return alert("Total file(s) size should not exceed 20MB."),!1}}}return!0}
+  </script>
+  <script id='wf_script' src='https://bigin.zoho.eu/crm/WebformScriptServlet?rid=c938b3760cef79fa104a6d95db5ac1e66fe3e0257bd255427c8475587d49c2ffgid6fe99b3f7f48f0cd229fdd3776846295baad22d289a6dbf074ebaa00defd792b'></script>
