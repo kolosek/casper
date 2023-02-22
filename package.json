@@ -119,16 +119,6 @@
                 "default": true,
                 "group": "homepage"
             },
-            "header_style": {
-                "type": "select",
-                "options": [
-                    "Center aligned",
-                    "Left aligned",
-                    "Hidden"
-                ],
-                "default": "Center aligned",
-                "group": "homepage"
-            },
             "feed_layout": {
                 "type": "select",
                 "options": [
@@ -147,22 +137,6 @@
                     "Auto"
                 ],
                 "default": "Light"
-            },
-            "post_image_style": {
-                "type": "select",
-                "options": [
-                    "Wide",
-                    "Full",
-                    "Small",
-                    "Hidden"
-                ],
-                "default": "Wide",
-                "group": "post"
-            },
-            "email_signup_text": {
-                "type": "text",
-                "default": "Sign up for more like this.",
-                "group": "post"
             },
             "show_recent_posts_footer": {
                 "type": "boolean",
