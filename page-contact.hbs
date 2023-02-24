@@ -11,7 +11,10 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 mt-20 mb-20">
       <div class="relative overflow-hidden bg-gradient-to-b bg-gray-100 py-10 px-6 sm:px-10 xl:p-12">
-        <h3 class="text-3xl text-left font-semibold">Get in touch</h3>
+        <h3 class="relative text-3xl text-left font-semibold" style="width: 220px;">
+          Get in touch
+          <img class="absolute" style="top: -10px; right: 18px;" src={{asset "images/freehand/contact/01.svg"}} />
+        </h3>
         <div class="flex items-center mt-10">
           <img src={{ asset "images/Call.svg"}} />
           <div class="ml-4 text-lg font-semibold">Call us</div>
@@ -82,7 +85,12 @@
     </div>
 
     <div class="mt-40 mb-40 md:col-span-2 sm:pl-20 sm:pr-20 lg:pl-40 lg:pr-40">
-      <h1 class="text-4xl font-bold tracking-tight text-center">Need a review?</h1>
+      <div class="flex justify-center">
+        <h1 class="relative text-4xl font-bold tracking-wide text-center" style="width: 300px;">
+          Need a review?
+          <img class="absolute" style="top: -20px; right: -18px;" src={{asset "images/freehand/contact/02.svg"}} />
+        </h1>
+      </div>
       <p class="mt-4 leading-8 text-gray-600">Submit your code or/and design to get feedback on your work. The main goal of this process is to provide <br /> you with an expert analysis and suggestions on how to improve your product</p>
       <div class="flex-column xl:flex justify-center mt-16">
         <div class="overflow-hidden rounded-lg bg-white shadow mb-3 pl-4 xl:mr-14">
