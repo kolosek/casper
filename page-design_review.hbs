@@ -189,36 +189,36 @@
           <img class="absolute" style="top: -15px; right: -34px;" src={{asset "images/freehand/design_review/01.svg"}} />
         </h1>
       </div>
-      <form action="/" method="POST" class="space-y-8">
+      <form action="https://api.formbucket.com/f/buk_mxjjrWvZSEw3MqXtVJfAR4QJ" id="my-awesome-form" method="POST" class="space-y-8 codereview-form">
         <div class="space-y-8">
         
           <div class="pt-8">
             <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
               <div class="sm:col-span-3">
-                <label for="full-name" class="block text-sm font-medium text-gray-700 text-left">Full name</label>
+                <label for="full-name" class="block text-sm font-medium text-gray-700 text-left">Your name *</label>
                 <div class="mt-1">
-                  <input type="text" name="full-name" id="full-name" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                  <input type="name" required id="exampleInputName1" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
                 </div>
               </div>
 
               <div class="sm:col-span-3">
-                <label for="email" class="block text-sm font-medium text-gray-700 text-left">Email</label>
+                <label for="email" class="block text-sm font-medium text-gray-700 text-left">Your email *</label>
                 <div class="mt-1">
-                  <input type="email" name="email" id="email" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                  <input type="email" required id="exampleEmail1" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
                 </div>
               </div>
 
               <div class="sm:col-span-3">
-                <label for="company" class="block text-sm font-medium text-gray-700 text-left">Company</label>
+                <label for="company" class="block text-sm font-medium text-gray-700 text-left">Your company *</label>
                 <div class="mt-1">
-                  <input type="text" name="company" id="company" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                  <input type="text" required id="Company1" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
                 </div>
               </div>
 
               <div class="sm:col-span-3">
-                <label for="url" class="block text-sm font-medium text-gray-700 text-left">Enter URL here</label>
+                <label for="url" class="block text-sm font-medium text-gray-700 text-left">Enter URL here *</label>
                 <div class="mt-1">
-                  <input type="text" name="url" id="url" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
+                  <input type="text" id="Code1" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" />
                 </div>
               </div>
 
@@ -226,7 +226,7 @@
               <div class="sm:col-span-6">
                 <label for="description" class="block text-sm font-medium text-gray-700 text-left">Why are you using our service?</label>
                 <div class="mt-1">
-                  <textarea name="description" rows="7" id="description" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm pl-3 pt-3"></textarea>
+                  <textarea rows="7" id="Service1" class="block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm pl-3 pt-3"></textarea>
                 </div>
               </div>
             </div>
@@ -237,11 +237,11 @@
               <fieldset class="mt-6">
                 <div class="mt-4 space-y-4">
                   <div class="flex items-center">
-                    <input id="push-everything" name="push-notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                    <input id="Review1" name="checkbox" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" checked />
                     <label for="push-everything" class="ml-3 block text-sm font-medium text-gray-700">Basic Review (free)</label>
                   </div>
                   <div class="flex items-center">
-                    <input id="push-email" name="push-notifications" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+                    <input id="Review2" name="checkbox" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" />
                     <label for="push-email" class="ml-3 block text-sm font-medium text-gray-700">Full review (price calculated by type and size of project)</label>
                   </div>
                 </div>
@@ -254,7 +254,7 @@
         <p class="text-sm text-gray-500 text-left">If full review is requested our team will contact you with further details based on project size, type and technologies used</p>
 
         <div class="px-4 py-3 text-center sm:px-6">
-          <button class="group inline-flex items-center justify-center rounded-full py-3 px-16 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">Submit</button>
+          <button type="submit" class="group inline-flex items-center justify-center rounded-full py-3 px-16 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">Submit</button>
           <p class="mt-5 text-gray-500 text-sm text-center">By clicking &quot;Submit&quot; you agree to the Privacy Policy and Terms of Use </p>
         </div>
       </form>
