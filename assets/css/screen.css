@@ -60,3 +60,11 @@
 }
 .bgn-wf-label:empty{display: none; }
 }
+
+.cover:after {
+  content: "\a0";
+  display: block;
+  border-bottom: 26px solid white;
+  position: relative;
+  bottom: 85px;
+}
