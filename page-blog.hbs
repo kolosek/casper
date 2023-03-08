@@ -1,0 +1,68 @@
+{{!< index-base}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the index-base.hbs template --}}
+
+{{!-- The main content area --}}
+
+{{> index_navigation blog=true}}
+
+
+<main id="site-main" class="site-main outer" role="main">
+
+  <div class="subscribe-section">
+      <h3 class="subscribe-text">Subscribe and learn more about development, design and startup challenges.</h3>
+      {{#if @labs.subscribers}}
+        <section class="gh-subscribe sticky-subscribe">
+          {{subscribe_form
+            form_class="subscribe-form"
+            input_class="subscribe-input"
+            button_class="subscribe-button subscribe-btn-main"
+            placeholder="Your email address"
+            autofocus="true"}}
+        </section>
+      {{/if}}
+  </div>
+
+  <div class="container">
+     <div class="row">
+        <div class="inner">
+          <div class="post-feed">
+              {{#if query.page}}
+                  {{#get "posts" page=query.page limit="10" include="authors,tags"}}
+                      {{#foreach posts}}
+
+                          {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                          {{> "post-card"}}
+
+                      {{/foreach}}
+
+                      {{pagination}}
+                  {{/get}}
+              {{else}}
+                  {{#get "posts" limit="10" include="authors,tags"}}
+                      {{#foreach posts}}
+
+                          {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                          {{> "post-card"}}
+
+                      {{/foreach}}
+
+                      {{pagination}}
+                  {{/get}}
+              {{/if}}
+          </div>
+
+      </div> 
+     </div>
+   </div> 
+</main>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '164785');
+</script>
+<!-- End MailerLite Universal -->
