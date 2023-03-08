@@ -134,7 +134,7 @@
 
   <div class="mt-20 lg:pt-12 text-center">
     <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Featured projects</h1>
-    <p class="mt-4 leading-8 text-gray-600">Here are a few recent works we are proud of. For more check our <a href="https://link.kolosek.com/c358e220" class="text-base leading-7" target="_blank"><u class="relative">Portfolio<img class="absolute" style="top: -30px; left: -10px;" src={{asset "images/freehand/homepage/05.svg"}} /></u></a></p>
+    <p class="mt-4 leading-8 text-gray-600">Here are a few recent works we are proud of. For more check our <a href="/portfolio" class="text-base leading-7"><u class="relative">Portfolio<img class="absolute" style="top: -30px; left: -10px;" src={{asset "images/freehand/homepage/05.svg"}} /></u></a></p>
   </div>
   <div class="bg-white">
     <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
@@ -209,38 +209,38 @@
             <dl class="mt-3 max-w-xl text-base leading-7 text-gray-600 lg:max-w-none">
               <div id="panel_tab1" class="relative pl-9 bg-black pt-6 pb-6 cursor-pointer">
                 <dt class="inline font-semibold text-gray-50">
-                  Build quality software faster!
+                  Protecting SaaS products from threats!
                 </dt>
-                <dd class="text-gray-400">With our automated optimization tools</dd>
+                <dd class="text-gray-400">You think your product doesn't get attacked? Think again.</dd>
               </div>
 
               <div id="panel_tab2" class="relative pl-9  pt-6 pb-6 cursor-pointer">
                 <dt class="inline font-semibold text-gray-900">
-                  No more searching
+                  Monitoring and responding on errors
                 </dt>
-                <dd class="text-gray-400">Know what test is exactly broken and where it is</dd>
+                <dd class="text-gray-400">So your users stay using the product.</dd>
               </div>
 
               <div id="panel_tab3" class="relative pl-9 pt-6 pb-6 cursor-pointer">
                 <dt class="inline font-semibold text-gray-900">
-                  Slowest files report
+                  Quality product is properly tested one
                 </dt>
-                <dd class="text-gray-400">Know where are those bottlenecks</dd>
+                <dd class="text-gray-400">High test coverage rate, less complaints from users</dd>
               </div>
 
               <div id="panel_tab4" class="relative pl-9 pt-6 pb-6 cursor-pointer">
                 <dt class="inline font-semibold text-gray-900">
-                  Stay on track!
+                  Inside out reports
                 </dt>
-                <dd class="text-gray-400">Get notified that the build failed</dd>
+                <dd class="text-gray-400">Know exactly what your product is actually doing. </dd>
               </div>
             </dl>
           </div>
         </div>
-        <img id="panel_img1" src="{{ asset "images/interface.png"}}" />
-        <img id="panel_img2" style="display: none;" src="{{ asset "images/interface.png"}}" />
-        <img id="panel_img3" style="display: none;" src="{{ asset "images/interface.png"}}" />
-        <img id="panel_img4" style="display: none;" src="{{ asset "images/interface.png"}}" />
+        <img id="panel_img1" style="height: 100%;" src="{{ asset "images/blocked-traffic-overview.png"}}" />
+        <img id="panel_img2" style="display: none; height: 100%;" src="{{ asset "images/error-tracking-monitor.png"}}" />
+        <img id="panel_img3" style="display: none; height: 100%;" src="{{ asset "images/code-coverage-summary.png"}}" />
+        <img id="panel_img4" style="display: none; height: 100%;" src="{{ asset "images/detailed-insights-app-report.jpg"}}" />
       </div>
     </div>
   </div>
@@ -326,7 +326,7 @@
           {{/foreach}}
         {{/get}}
 
-        {{#get "posts" filter="featured:false" limit="6" include="authors,tags"}}
+        {{#get "posts" filter="featured:false" limit="5" include="authors,tags"}}
           {{#foreach posts}}
 
             {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}

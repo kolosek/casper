@@ -1,0 +1,657 @@
+:root {
+
+    /* Colours */
+    --color-green: #a4d037;
+    --color-yellow: #fecd35;
+    --color-red: #f05230;
+    --color-darkgrey: #15171A;
+    --color-midgrey: #738a94;
+    --color-lightgrey: #f1f1f1;
+    --color-secondary-text: #979797;
+    --color-border: #e1e1e1;
+    --color-wash: #e5eff5;
+    --color-darkmode: #151719;
+
+    /* Fonts */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-serif: Georgia, Times, serif;
+    --font-mono: Menlo, Courier, monospace;
+
+}
+
+.post-content body {
+    line-height: 1;
+}
+.post-content :is(ol,
+ul) {
+    list-style: none;
+}
+.post-content :is(blockquote,
+q) {
+    quotes: none;
+}
+.post-content blockquote:before,
+.post-content blockquote:after,
+.post-content q:before,
+.post-content q:after {
+    content: "";
+    content: none;
+}
+.post-content table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.post-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.post-content {
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.post-content a {
+    background-color: transparent;
+}
+.post-content a:active,
+.post-content a:hover {
+    outline: 0;
+}
+.post-content :is(b,
+strong) {
+    font-weight: bold;
+}
+.post-content :is(i,
+em,
+dfn) {
+    font-style: italic;
+}
+.post-content h1 {
+    margin: 0.67em 0;
+    font-size: 2em;
+}
+.post-content small {
+    font-size: 80%;
+}
+.post-content :is(sub,
+sup) {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+.post-content sup {
+    top: -0.5em;
+}
+.post-content sub {
+    bottom: -0.25em;
+}
+.post-content img {
+    border: 0;
+}
+.post-content svg:not(:root) {
+    overflow: hidden;
+}
+.post-content mark {
+    background-color: #fdffb6;
+}
+.post-content :is(code,
+kbd,
+pre,
+samp) {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+.post-content kbd {
+    padding: 3px 5px;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    background: #f6f8fa;
+    border: 1px solid rgba(124, 139, 154, 0.25);
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 rgba(124, 139, 154, 0.25);
+}
+@media (max-width: 600px) {
+    kbd {
+        font-size: 1.3rem;
+    }
+}
+.post-content :is(button,
+input,
+optgroup,
+select,
+textarea) {
+    margin: 0; /* 3 */
+    color: inherit; /* 1 */
+    font: inherit; /* 2 */
+}
+.post-content button {
+    overflow: visible;
+    border: none;
+}
+.post-content :is(button,
+select) {
+    text-transform: none;
+}
+.post-content legend {
+    padding: 0; /* 2 */
+    border: 0; /* 1 */
+}
+.post-content table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.post-content :is(td,
+th) {
+    padding: 0;
+}
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+.post-content {
+    font-size: 62.5%;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.post-content {
+    color: var(--color-darkgrey);
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    line-height: 1.6em;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    background: #fff;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: "liga" on;
+}
+
+.post-content hr {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 2.5em 0 3.5em;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.post-content :is(audio,
+canvas,
+iframe,
+img,
+svg,
+video) {
+    vertical-align: middle;
+}
+
+.post-content fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.post-content textarea {
+    resize: vertical;
+}
+
+::not(.gh-content) p,
+::not(.gh-content) ul,
+::not(.gh-content) ol,
+::not(.gh-content) dl,
+::not(.gh-content) blockquote {
+    margin: 0 0 1.5em 0;
+}
+
+.post-content :is(ol,
+ul) {
+    padding-left: 1.3em;
+    padding-right: 1.5em;
+}
+
+.post-content :is(ol ol,
+ul ul,
+ul ol,
+ol ul) {
+    margin: 0.5em 0 1em;
+}
+
+.post-content ul {
+    list-style: disc;
+}
+
+.post-content ol {
+    list-style: decimal;
+}
+
+.post-content :is(ul,
+ol) {
+    max-width: 100%;
+}
+
+.post-content li {
+    padding-left: 0.3em;
+    line-height: 1.6em;
+}
+
+.post-content li + li {
+    margin-top: 0.5em;
+}
+
+.post-content dt {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 120px;
+    color: #daf2fd;
+    font-weight: 500;
+    text-align: right;
+}
+
+.post-content dd {
+    margin: 0 0 5px 0;
+    text-align: left;
+}
+
+.post-content blockquote {
+    margin: 1.5em 0;
+    padding: 0 1.6em 0 1.6em;
+    border-left: #daf2fd;
+}
+
+.post-content blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+/* Quotation marks */
+.post-content blockquote small:before {
+    content: "\2014 \00A0";
+}
+
+.post-content blockquote cite {
+    font-weight: bold;
+}
+.post-content blockquote cite a {
+    font-weight: normal;
+}
+
+.post-content a {
+    color: #15171A;
+    text-decoration: none;
+}
+
+.post-content :is(h1,
+h2,
+h3,
+h4,
+h5,
+h6) {
+    margin-top: 0;
+    line-height: 1.15;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -0.01em;
+}
+
+.post-content h1 {
+    margin: 0 0 0.5em 0;
+    font-size: 4.8rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+@media (max-width: 600px) {
+    .post-content h1 {
+        font-size: 2.8rem;
+    }
+}
+
+.post-content h2 {
+    margin: 1.5em 0 0.5em 0;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+@media (max-width: 600px) {
+    .post-content h2 {
+        font-size: 2.3rem;
+    }
+}
+
+.post-content h3 {
+    margin: 1.5em 0 0.5em 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+@media (max-width: 600px) {
+    .post-content h3 {
+        font-size: 1.7rem;
+    }
+}
+
+.post-content h4 {
+    margin: 1.5em 0 0.5em 0;
+    font-size: 2rem;
+}
+@media (max-width: 600px) {
+    .post-content h4 {
+        font-size: 1.7rem;
+    }
+}
+
+.post-content h5 {
+    margin: 1.5em 0 0.5em 0;
+    font-size: 2rem;
+}
+
+.post-content h6 {
+    margin: 1.5em 0 0.5em 0;
+    font-size: 1.8rem;
+}
+
+
+
+
+
+/* 6. Single Post
+/* ---------------------------------------------------------- */
+
+.article {
+    padding: max(8vmin, 40px) 0 max(8vmin, 64px);
+    word-break: break-word;
+}
+
+.page-template .article {
+    padding-top: max(12vmin, 64px);
+}
+
+.article-header {
+    padding: 0 0 max(6.4vmin, 40px) 0;
+}
+
+.page-template .article-header {
+    padding-bottom: max(3.2vmin, 28px);
+}
+
+.article-tag {
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+}
+
+.article-tag a {
+    color: var(--color-secondary-text);
+}
+
+.article-title {
+    margin-bottom: 0;
+    font-size: clamp(3.2rem, 5vw, 5.2rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: var(--color-darkgrey);
+}
+
+.has-serif-title .article-title {
+    font-family: var(--font-serif);
+}
+
+.article-excerpt {
+    margin-top: 20px;
+    max-width: 720px;
+    font-size: 2rem;
+    line-height: 1.45;
+    color: var(--color-darkgrey);
+}
+
+.gh-canvas .article-image {
+    grid-column: wide-start / wide-end;
+    width: 100%;
+    margin: max(6.4vmin, 40px) 0 0;
+}
+
+.image-full .article-image {
+    grid-column: full-start / full-end;
+}
+
+.image-small .article-image {
+    grid-column: main-start / main-end;
+}
+
+.gh-canvas .article-image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .article-excerpt {
+        margin-top: 14px;
+        font-size: 1.7rem;
+    }
+}
+
+/* -------- */
+
+/* Content grid
+/* ---------------------------------------------------------- */
+
+/* Canvas creates a multi-column, centered grid which the post
+is laid out on top of. Canvas just defines the grid, we don't
+use it for applying any other styles. */
+
+.gh-canvas {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(max(4vmin, 20px), auto)
+            [wide-start]
+            minmax(auto, 240px)
+                [main-start]
+                    min(720px, calc(100% - max(8vmin, 40px)))
+                [main-end]
+            minmax(auto, 240px)
+            [wide-end]
+        minmax(max(4vmin, 20px), auto)
+        [full-end]
+    ;
+}
+
+.gh-canvas > * {
+    grid-column: main-start / main-end;
+}
+
+.kg-width-wide {
+    grid-column: wide-start / wide-end;
+}
+
+.kg-width-full {
+    grid-column: full-start / full-end;
+}
+
+.kg-width-full img {
+    width: 100%;
+}
+
+
+/* Content
+/* ---------------------------------------------------------- */
+
+/* Content refers to styling all page and post content that is
+created within the Ghost editor. The main content handles
+headings, text, images and lists. We deal with cards lower down. */
+
+/* Default vertical spacing */
+.gh-content > * + * {
+    margin-top: max(3.2vmin, 24px);
+    margin-bottom: 0;
+}
+
+/* [id] represents all headings h1-h6, reset all margins */
+.gh-content > [id] {
+    margin: 0;
+    color: var(--color-darkgrey);
+}
+
+.has-serif-title .gh-content > [id] {
+    font-family: var(--font-serif);
+}
+
+/* Add back a top margin to all headings, unless a heading
+is the very first element in the post content */
+.gh-content > [id]:not(:first-child) {
+    margin: 2em 0 0;
+}
+
+/* Add a small margin between a heading and anything after it */
+.gh-content > [id] + * {
+    margin-top: 1.5rem !important;
+}
+
+/* A larger margin before/after HRs and blockquotes */
+.gh-content > hr,
+.gh-content > blockquote {
+    position: relative;
+    margin-top: max(4.8vmin, 32px);
+}
+.gh-content > hr + *,
+.gh-content > blockquote + * {
+    margin-top: max(4.8vmin, 32px) !important;
+}
+
+/* Now the content typography styles */
+.gh-content a {
+    color: #ff1a75;
+    text-decoration: underline;
+    word-break: break-word;
+}
+
+.gh-content > blockquote:not([class]),
+.gh-content > ol,
+.gh-content > ul,
+.gh-content > dl,
+.gh-content > p {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.6em;
+}
+
+.gh-content .kg-callout-card .kg-callout-text,
+.gh-content .kg-toggle-card .kg-toggle-content > ol,
+.gh-content .kg-toggle-card .kg-toggle-content > ul,
+.gh-content .kg-toggle-card .kg-toggle-content > p {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.6em;
+}
+
+.gh-content .kg-product-card .kg-product-card-description > p,
+.gh-content .kg-product-card .kg-product-card-description > ol,
+.gh-content .kg-product-card .kg-product-card-description > ul {
+    font-size: 1.7rem;
+    line-height: 1.6em;
+}
+
+.gh-content .kg-callout-card .kg-callout-emoji {
+    font-size: 2.1rem;
+    line-height: 1.4em;
+}
+
+.gh-content .kg-toggle-card .kg-toggle-heading-text {
+    font-size: 2.0rem;
+}
+
+.has-sans-body .gh-content > blockquote,
+.has-sans-body .gh-content > ol,
+.has-sans-body .gh-content > ul,
+.has-sans-body .gh-content > dl,
+.has-sans-body .gh-content > p,
+.has-sans-body .gh-content .kg-callout-card .kg-callout-text,
+.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content > ol,
+.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content > ul,
+.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content > p {
+    font-family: var(--font-sans);
+}
+
+.gh-content > ul,
+.gh-content > ol,
+.gh-content > dl,
+.gh-content .kg-toggle-card .kg-toggle-content > ol,
+.gh-content .kg-toggle-card .kg-toggle-content > ul,
+.gh-content .kg-product-card .kg-product-card-description > ol,
+.gh-content .kg-product-card .kg-product-card-description > ul {
+    padding-left: 1.9em;
+}
+
+.gh-content > blockquote:not([class]) {
+    position: relative;
+    font-style: italic;
+    padding: 0;
+}
+
+.gh-content > blockquote:not([class])::before {
+    content: "";
+    position: absolute;
+    left: -1.5em;
+    top: 0;
+    bottom: 0;
+    width: 0.3rem;
+    background: #ff1a75;
+}
+
+.gh-content :not(pre) > code {
+    vertical-align: middle;
+    padding: 0.15em 0.4em 0.15em;
+    border: #e1eaef 1px solid;
+    font-weight: 400 !important;
+    font-size: 0.9em;
+    line-height: 1em;
+    color: #15171A;
+    background: #f0f6f9;
+    border-radius: 0.25em;
+}
+
+.gh-content pre {
+    overflow: auto;
+    padding: 16px 20px;
+    color: var(--color-wash);
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    background: var(--color-darkgrey);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+}
+
+@media (max-width: 650px) {
+    .gh-content > blockquote:not([class]),
+    .gh-content > ol,
+    .gh-content > ul,
+    .gh-content > dl,
+    .gh-content > p,
+    .gh-content .kg-callout-card .kg-callout-text,
+    .gh-content .kg-toggle-card .kg-toggle-content > ol,
+    .gh-content .kg-toggle-card .kg-toggle-content > ul,
+    .gh-content .kg-toggle-card .kg-toggle-content > p {
+        font-size: 1.8rem;
+    }
+
+    .gh-content .kg-product-card .kg-product-card-description > p,
+    .gh-content .kg-product-card .kg-product-card-description > ol,
+    .gh-content .kg-product-card .kg-product-card-description > ul {
+        font-size: 1.6rem;
+    }
+
+    .gh-content blockquote:not([class])::before {
+        left: min(-4vmin, -20px);
+    }
+}
