@@ -20,7 +20,7 @@ into the {body} tag of the default.hbs template --}}
         {{/foreach}}
         </ul>
       {{/if}}
-      <h1 class="text-4xl font-medium text-center">{{title}}</h1>
+      <h1 class="text-5xl font-medium tracking-tight text-center" style="line-height: 60px;">{{title}}</h1>
       {{#primary_author}}
         <figcaption class="relative mt-5 flex justify-center items-center px-6">
           <div class="overflow-hidden rounded-full bg-slate-50 mr-5">
@@ -63,9 +63,9 @@ into the {body} tag of the default.hbs template --}}
             <img src="{{ asset "images/git-black.svg"}}" style="width: 22px; height: 22px;">
           </a>
         </div>
-        <section class="post-content">
-          {{content}}
-        </section>
+          <section class="post-content gh-content gh-canvas">
+            {{content}}
+          </section>
       </section>
 
       <div class="mt-5 pl-20">
