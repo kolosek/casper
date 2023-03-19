@@ -72,7 +72,7 @@ dfn) {
 }
 .post-content h1 {
     margin: 0.67em 0;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 .post-content small {
     font-size: 80%;
@@ -317,19 +317,19 @@ h6) {
 }
 
 .post-content h2 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 2.8rem;
+    margin: 1em 0 0.5em 0;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 @media (max-width: 600px) {
     .post-content h2 {
-        font-size: 2.3rem;
+        font-size: 1.2rem;
     }
 }
 
 .post-content h3 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 2.4rem;
+    margin: 1em 0 0.5em 0;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 @media (max-width: 600px) {
@@ -450,6 +450,7 @@ use it for applying any other styles. */
 
 .gh-canvas {
     display: grid;
+    /*
     grid-template-columns:
         [full-start]
         minmax(max(4vmin, 20px), auto)
@@ -463,6 +464,7 @@ use it for applying any other styles. */
         minmax(max(4vmin, 20px), auto)
         [full-end]
     ;
+    */
 }
 
 .gh-canvas > * {
@@ -541,7 +543,7 @@ is the very first element in the post content */
 .gh-content > p {
     font-family: var(--font-serif);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 1.6em;
 }
 
