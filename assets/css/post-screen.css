@@ -70,10 +70,6 @@ em,
 dfn) {
     font-style: italic;
 }
-.post-content h1 {
-    margin: 0.67em 0;
-    font-size: 1.6em;
-}
 .post-content small {
     font-size: 80%;
 }
@@ -306,13 +302,13 @@ h6) {
 
 .post-content h1 {
     margin: 0 0 0.5em 0;
-    font-size: 4.8rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: -0.015em;
 }
 @media (max-width: 600px) {
     .post-content h1 {
-        font-size: 2.8rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -510,7 +506,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin: 2em 0 0;
+    margin: 1.8em 0 0;
 }
 
 /* Add a small margin between a heading and anything after it */
@@ -627,8 +623,8 @@ is the very first element in the post content */
     overflow: auto;
     padding: 16px 20px;
     color: var(--color-wash);
-    font-size: 1.4rem;
-    line-height: 1.5em;
+    font-size: 1rem;
+    line-height: 1.1em;
     background: var(--color-darkgrey);
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
