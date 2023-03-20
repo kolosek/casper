@@ -70,10 +70,6 @@ em,
 dfn) {
     font-style: italic;
 }
-.post-content h1 {
-    margin: 0.67em 0;
-    font-size: 2em;
-}
 .post-content small {
     font-size: 80%;
 }
@@ -306,30 +302,30 @@ h6) {
 
 .post-content h1 {
     margin: 0 0 0.5em 0;
-    font-size: 4.8rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: -0.015em;
 }
 @media (max-width: 600px) {
     .post-content h1 {
-        font-size: 2.8rem;
+        font-size: 1.8rem;
     }
 }
 
 .post-content h2 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 2.8rem;
+    margin: 1em 0 0.5em 0;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 @media (max-width: 600px) {
     .post-content h2 {
-        font-size: 2.3rem;
+        font-size: 1.2rem;
     }
 }
 
 .post-content h3 {
-    margin: 1.5em 0 0.5em 0;
-    font-size: 2.4rem;
+    margin: 1em 0 0.5em 0;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 @media (max-width: 600px) {
@@ -450,6 +446,7 @@ use it for applying any other styles. */
 
 .gh-canvas {
     display: grid;
+    /*
     grid-template-columns:
         [full-start]
         minmax(max(4vmin, 20px), auto)
@@ -463,6 +460,7 @@ use it for applying any other styles. */
         minmax(max(4vmin, 20px), auto)
         [full-end]
     ;
+    */
 }
 
 .gh-canvas > * {
@@ -508,7 +506,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
 .gh-content > [id]:not(:first-child) {
-    margin: 2em 0 0;
+    margin: 1.8em 0 0;
 }
 
 /* Add a small margin between a heading and anything after it */
@@ -541,7 +539,7 @@ is the very first element in the post content */
 .gh-content > p {
     font-family: var(--font-serif);
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.2rem;
     line-height: 1.6em;
 }
 
@@ -625,8 +623,8 @@ is the very first element in the post content */
     overflow: auto;
     padding: 16px 20px;
     color: var(--color-wash);
-    font-size: 1.4rem;
-    line-height: 1.5em;
+    font-size: 1rem;
+    line-height: 1.1em;
     background: var(--color-darkgrey);
     border-radius: 5px;
     box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
