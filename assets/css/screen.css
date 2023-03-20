@@ -68,3 +68,13 @@
   position: relative;
   bottom: 85px;
 }
+
+.posting-form {
+  padding-left: 30%;
+}
+@media screen and (max-width: 900px) {
+  .posting-form {
+    padding-left: 20%;
+  }
+}
+
